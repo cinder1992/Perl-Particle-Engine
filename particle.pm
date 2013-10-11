@@ -1,6 +1,6 @@
-#!/usr/bin/perl:s
+#!/usr/bin/perl
 
-packlife particle;
+package particle;
 use strict;
 use warnings;
 # Define our TYPE constants
@@ -38,7 +38,7 @@ sub createEmmitter {
     _type     => shift,               #Type of particle system, defined by PTYPE !!not implemented, assumed to be a point
     _size     => shift,               #Size of system, array in the format [X,Y] !!not implemented
     _maxParts => shift,               #Maximum number of particles in the array. for cleanup and re-use purposes
-    _imlife    => 0,                   #SDL image to use for the particle !!Not implemented, to be implemented when the particleRender and partSysRender functions are done.
+    _image    => 0,                   #SDL image to use for the particle !!Not implemented, to be implemented when the particleRender and partSysRender functions are done.
     _color    => [255,255,255],       #Color modifier format: [R,G,B] !!Not implemented
     _life     => 10,                  #How many frames does this particle stay for?
     _freq     => 1,                   #How many particles created per frame, only really for init
