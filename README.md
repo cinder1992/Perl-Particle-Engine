@@ -7,7 +7,7 @@ What is it?
 -----------
 the Perl Particle Engine is a Particle engine, designed to work inside the bindings of Perl-SDL.
 
-How to use ot
+How to use it
 -----------
 Not currently useable, this section will be written when it is useable
 
