@@ -39,7 +39,7 @@ while (!$exiting) {
       my $velY = int(rand(400)-200);         #Y velocity randomiser
       my $x = $mouse[0];
       my $y = $mouse[1];
-      $particles[$i] = particle->new([$velX,$velY], [$x, $y], $sprite, 500, $time, -5);
+      $particles[$i] = particle->new([$velX,$velY], [$x, $y], $sprite, 500, $time, -2);
     }
     $spawn = 0;                            #This is no longer the first iteration
   }
@@ -83,7 +83,10 @@ while (!$exiting) {
 }
 sub hitSomething {
   my $i = shift(@_);
-  if (($particles[$i]->{_pos}[1] + 5 >= $colRect->y) and ($particles[$i]->{_pos}[1] + 5<= $colRect->y + $colRect->h) and ($particles[$i]->{_pos}[0] + 5 >= $colRect->x) and ($particles[$i]->{_pos}[0] + 5 <= $colRect->x + $colRect->w)){ #Did we hit something?
+  if (($particles[$i]->{_pos}[1] + 5 >= $colRect->y) 
+  and ($particles[$i]->{_pos}[1] + 5<= $colRect->y + $colRect->h) 
+  and ($particles[$i]->{_pos}[0] + 5 >= $colRect->x)
+  and ($particles[$i]->{_pos}[0] + 5 <= $colRect->x + $colRect->w)){ #Did we hit something?
     return 1;
   }
   else{
